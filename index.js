@@ -5,7 +5,8 @@ const tinmoi = require('./routes/tinmoi.route'); // Imports routes for the produ
 const app = express();
 app.use('/', tinmoi);
 let port = process.env.PORT | 3000;
+let host = '0.0.0.0';
 
-app.listen(port, () => {
+app.listen(port, host, () => {
     console.log('Server is up and running on port numner ' + port);
 });
